@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наше меню | Паста и не только</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #fffaf5;
+            color: #2c241a;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Шапка */
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #c97e3a;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #6b5a4e;
+            font-size: 1rem;
+        }
+
+        /* Сетка карточек — адаптивная */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Карточка блюда */
+        .card {
+            background: white;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.12);
+        }
+
+        .card-image {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            background: #e9e1d8;
+        }
+
+        .card-content {
+            padding: 1.2rem 1.2rem 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        .card-description {
+            font-size: 0.9rem;
+            color: #6b5a4e;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .card-price {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: #c97e3a;
+        }
+
+        /* Подвал */
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #f0e4d8;
+            color: #aa9a8a;
+            font-size: 0.8rem;
+        }
+
+        /* Адаптив для телефонов */
+        @media (max-width: 640px) {
+            body {
+                padding: 12px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .menu-grid {
+                gap: 1rem;
+            }
+            
+            .card-title {
+                font-size: 1.3rem;
+            }
+            
+            .card-content {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>🍝 Итальянское меню</h1>
+        <div class="subtitle">Паста, пицца и не только — домашняя кухня с любовью</div>
+    </div>
+
+    <div class="menu-grid">
+        <!-- Карточка 1: Паста Карбонара -->
+        <div class="card">
+            <img class="card-image" src="images/1.jpg" alt="Паста Карбонара">
+            <div class="card-content">
+                <div class="card-title">Паста Карбонара</div>
+                <div class="card-description">Спагетти, гуанчиале, яйцо, пекорино, чёрный перец. Классика римской кухни.</div>
+                <div class="card-price">590 ₽</div>
+            </div>
+        </div>
+
+        <!-- Карточка 2: Паста Болоньезе -->
+        <div class="card">
+            <img class="card-image" src="images/2.jpg" alt="Паста Болоньезе">
+            <div class="card-content">
+                <div class="card-title">Паста Болоньезе</div>
+                <div class="card-description">Томатный соус с мясным рагу из говядины, тальятелле и пармезан.</div>
+                <div class="card-price">650 ₽</div>
+            </div>
+        </div>
+
+        <!-- Карточка 3: Паста Песто -->
+        <div class="card">
+            <img class="card-image" src="images/3.jpg" alt="Паста Песто">
+            <div class="card-content">
+                <div class="card-title">Паста Песто</div>
+                <div class="card-description">Трофие с соусом из базилика, кедровых орехов, пармезана и оливкового масла.</div>
+                <div class="card-price">620 ₽</div>
+            </div>
+        </div>
+
+        <!-- Карточка 4: Паста с морепродуктами -->
+        <div class="card">
+            <img class="card-image" src="images/4.jpg" alt="Паста с морепродуктами">
+            <div class="card-content">
+                <div class="card-title">Паста с морепродуктами</div>
+                <div class="card-description">Лингуине, креветки, мидии, кальмары, томаты, чеснок и белое вино.</div>
+                <div class="card-price">890 ₽</div>
+            </div>
+        </div>
+
+        <!-- Карточка 5: Пицца Маргарита -->
+        <div class="card">
+            <img class="card-image" src="images/5.jpg" alt="Пицца Маргарита">
+            <div class="card-content">
+                <div class="card-title">Пицца Маргарита</div>
+                <div class="card-description">Томатный соус, моцарелла, свежий базилик, оливковое масло.</div>
+                <div class="card-price">550 ₽</div>
+            </div>
+        </div>
+
+        <!-- Карточка 6: Тирамису -->
+        <div class="card">
+            <img class="card-image" src="images/6.jpg" alt="Тирамису">
+            <div class="card-content">
+                <div class="card-title">Тирамису</div>
+                <div class="card-description">Кофейный десерт с маскарпоне, бисквитом савоярди и какао.</div>
+                <div class="card-price">380 ₽</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        🍴 Приятного аппетита! — Все блюда приготовлены с душой
+    </footer>
+</div>
+</body>
+</html>
